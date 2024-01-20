@@ -1,0 +1,43 @@
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+line-length = 80
+indent-width = 4
+
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "UP", "B", "I", "A", "N", "SIM", "RUF", "C4", "FA"]
+# Ignore rule tp allow DB Session creation on request 
+ignore = ["B008"]
+
+[format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+line-ending = "auto"
